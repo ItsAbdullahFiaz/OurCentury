@@ -19,7 +19,7 @@
 
 <article class="blog-excerpt mb-5 pb-5 border-bottom">
   <div class="row align-items-center">
-    <div class="col-12 col-md-4 mb-4 mb-md-0">
+    <div class="col-12 col-md-5 mb-4 mb-md-0">
       <div class="blog-image-container position-relative overflow-hidden rounded">
         {% if card_img or page.has_meta_image? %}
           <img src="{{ card_img | default: page.meta_image_url }}" class="img-fluid w-100" style="height: 300px; object-fit: cover;" />
@@ -34,15 +34,17 @@
       </div>
     </div>
     
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-7">
       <div class="blog-content-container ps-md-4">
         <h2 class="mb-3">
           <a href="{{ page.url }}" class="text-dark text-decoration-none">{{ page.headline }}</a>
         </h2>
   
         <div class="post-excerpt mb-3">
-          <p>{{ page.blog_post.content_full }}</p>
+          <p>{{ page.blog_post.content_full | strip_html | truncatewords: 32 }}</p>
         </div>
+        
+        <a href="{{ page.url }}" class="btn btn-primary">Read More</a>
       </div>
     </div>
   </div>
