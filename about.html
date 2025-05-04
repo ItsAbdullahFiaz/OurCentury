@@ -1,0 +1,444 @@
+<style>
+    /* Scoped styles that won't affect the rest of the page */
+    .our-team {
+      --team-primary: #041e42;
+      --team-secondary: #c41230;
+      --team-accent: #f8a9b8;
+      --team-light: #f8f9fa;
+      --team-dark: #212529;
+    }
+    
+    .our-team .intro-text {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      text-align: center;
+      line-height: 1.8;
+    }
+    
+    .our-team .team-intro {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+    
+    .our-team .section-title {
+      position: relative;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      font-weight: 700;
+    }
+    
+    .our-team .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--team-secondary);
+    }
+    
+    .our-team .team-section {
+      padding: 4rem 0;
+    }
+    
+    .our-team .team-member {
+      text-align: center;
+      margin-bottom: 3rem;
+      transition: all 0.3s ease;
+    }
+    
+    .our-team .team-member:hover {
+      transform: translateY(-10px);
+    }
+    
+    .our-team .member-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .our-team .team-member:hover .member-img {
+      border-color: var(--team-secondary);
+    }
+    
+    .our-team .member-name {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--team-primary);
+    }
+    
+    .our-team .member-title {
+      color: var(--team-secondary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .our-team .bio-btn {
+      background-color: var(--team-primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .our-team .bio-btn:hover {
+      background-color: var(--team-secondary);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      color: white;
+      text-decoration: none;
+    }
+    
+    .our-team .bio-modal .modal-header {
+      background-color: var(--team-primary);
+      color: white;
+      border-radius: 0;
+    }
+    
+    .our-team .bio-modal .modal-title {
+      font-weight: 600;
+    }
+    
+    .our-team .bio-modal .close {
+      color: white;
+      opacity: 1;
+    }
+    
+    .our-team .bio-modal .modal-footer {
+      background-color: #f8f9fa;
+    }
+    
+    .our-team .section-divider {
+      margin: 3rem 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 767px) {
+      .our-team .team-member {
+        margin-bottom: 2.5rem;
+      }
+      
+      .our-team .member-img {
+        width: 180px;
+        height: 180px;
+      }
+      
+      .our-team .member-name {
+        font-size: 1.3rem;
+      }
+    }
+    
+    @media (max-width: 575px) {
+      .our-team .member-img {
+        width: 150px;
+        height: 150px;
+      }
+      
+      .our-team .intro-text {
+        padding: 0 15px;
+      }
+    }
+  </style>
+
+<!-- Header will be included here -->
+
+<!-- About Team Section -->
+<div class="our-team">
+  <!-- Introduction -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="intro-text">
+          <p>Our Century is a political action committee founded to help a new generation take ownership of America's future. At a time of deep challenges—from threats to democracy and rising inequality to climate change and global instability—we believe it's essential to bring principled, pragmatic leadership back to the forefront. Our mission is to support candidates and causes that reflect the values of inclusion, opportunity, and responsible governance. By engaging younger Americans in civic life and promoting bold, solutions-focused policies, we aim to turn the energy of a new era into real, lasting change.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Co-Chairs Section -->
+  <section class="team-section">
+    <div class="container">
+      <p class="team-intro">Meet the dedicated team guiding our mission forward</p>
+      <h3 class="section-title">Our Co-Chairs</h3>
+      <div class="row">
+        <!-- Co-Chair 1 -->
+        <div class="col-lg-6 col-md-6">
+          <div class="team-member">
+            <img src="https://assets.nationbuilder.com/ourcentury/pages/34/attachments/original/1746358725/dummy-profile-pic-300x300-1.png?1746358725" alt="Co-Chair Name" class="member-img">
+            <h4 class="member-name">Jane Smith</h4>
+            <p class="member-title">Co-Chair</p>
+            <a href="#" class="bio-btn" data-toggle="modal" data-target="#coChair1Modal">Read Bio</a>
+          </div>
+        </div>
+        
+        <!-- Co-Chair 2 -->
+        <div class="col-lg-6 col-md-6">
+          <div class="team-member">
+            <img src="https://assets.nationbuilder.com/ourcentury/pages/34/attachments/original/1746358725/dummy-profile-pic-300x300-1.png?1746358725" alt="Co-Chair Name" class="member-img">
+            <h4 class="member-name">John Davis</h4>
+            <p class="member-title">Co-Chair</p>
+            <a href="#" class="bio-btn" data-toggle="modal" data-target="#coChair2Modal">Read Bio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+  <!-- Advisors Section -->
+  <section class="team-section py-5">
+    <div class="container">
+      <h3 class="section-title">Our Advisors</h3>
+      <div class="row">
+        <!-- Advisor 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <img src="https://assets.nationbuilder.com/ourcentury/pages/34/attachments/original/1746358725/dummy-profile-pic-300x300-1.png?1746358725" alt="Advisor Name" class="member-img">
+            <h4 class="member-name">Robert Johnson</h4>
+            <p class="member-title">Political Strategist</p>
+            <a href="#" class="bio-btn" data-toggle="modal" data-target="#advisor1Modal">Read Bio</a>
+          </div>
+        </div>
+        
+        <!-- Advisor 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <img src="https://assets.nationbuilder.com/ourcentury/pages/34/attachments/original/1746358725/dummy-profile-pic-300x300-1.png?1746358725" alt="Advisor Name" class="member-img">
+            <h4 class="member-name">Emily Wilson</h4>
+            <p class="member-title">Policy Expert</p>
+            <a href="#" class="bio-btn" data-toggle="modal" data-target="#advisor2Modal">Read Bio</a>
+          </div>
+        </div>
+        
+        <!-- Advisor 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <img src="https://assets.nationbuilder.com/ourcentury/pages/34/attachments/original/1746358725/dummy-profile-pic-300x300-1.png?1746358725" alt="Advisor Name" class="member-img">
+            <h4 class="member-name">Michael Chen</h4>
+            <p class="member-title">Community Organizer</p>
+            <a href="#" class="bio-btn" data-toggle="modal" data-target="#advisor3Modal">Read Bio</a>
+          </div>
+        </div>
+        
+        <!-- Advisor 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <img src="https://assets.nationbuilder.com/ourcentury/pages/34/attachments/original/1746358725/dummy-profile-pic-300x300-1.png?1746358725" alt="Advisor Name" class="member-img">
+            <h4 class="member-name">Sarah Thompson</h4>
+            <p class="member-title">Legislative Director</p>
+            <a href="#" class="bio-btn" data-toggle="modal" data-target="#advisor4Modal">Read Bio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Bio Modals -->
+<!-- Co-Chair 1 Modal -->
+<div class="modal fade bio-modal" id="coChair1Modal" tabindex="-1" role="dialog" aria-labelledby="coChair1ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="coChair1ModalLabel">Jane Smith</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="https://via.placeholder.com/400?text=Co-Chair+1" alt="Co-Chair Name" class="img-fluid rounded">
+          </div>
+          <div class="col-md-8">
+            <h5 class="mb-3">Co-Chair</h5>
+            <p>Jane Smith has over 20 years of experience in political campaigning and advocacy. She began her career working on grassroots organizing campaigns before moving into political consulting and strategy development.</p>
+            <p>As a graduate of Georgetown University with a degree in Political Science, Jane has developed expertise in coalition building and policy development across multiple issue areas.</p>
+            <p>Before joining Our Century, Jane served as the Executive Director of the National Policy Alliance where she led initiatives focused on electoral reform and civic engagement.</p>
+            <p>Her work has been recognized with numerous awards, including the Distinguished Service Medal for Political Advocacy in 2018. Jane remains committed to building a more equitable and representative democracy through strategic political engagement.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Co-Chair 2 Modal -->
+<div class="modal fade bio-modal" id="coChair2Modal" tabindex="-1" role="dialog" aria-labelledby="coChair2ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="coChair2ModalLabel">John Davis</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="https://via.placeholder.com/400?text=Co-Chair+2" alt="Co-Chair Name" class="img-fluid rounded">
+          </div>
+          <div class="col-md-8">
+            <h5 class="mb-3">Co-Chair</h5>
+            <p>John Davis brings over 15 years of experience in government relations and public policy development. His career began in state government, where he served as a policy advisor for economic development initiatives.</p>
+            <p>John holds a Master's degree in Public Administration from Harvard Kennedy School and has specialized in developing strategies for effective governance and policy implementation.</p>
+            <p>Prior to joining Our Century, John was the Senior Director of Government Affairs at the Progressive Policy Institute, where he worked to advance bipartisan solutions to critical national challenges.</p>
+            <p>He has been featured in numerous national publications for his innovative approach to political coalition building and his ability to bridge partisan divides. John is dedicated to fostering a political environment that prioritizes practical solutions over ideological entrenchment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Advisor 1 Modal -->
+<div class="modal fade bio-modal" id="advisor1Modal" tabindex="-1" role="dialog" aria-labelledby="advisor1ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="advisor1ModalLabel">Robert Johnson</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="https://via.placeholder.com/400?text=Advisor+1" alt="Advisor Name" class="img-fluid rounded">
+          </div>
+          <div class="col-md-8">
+            <h5 class="mb-3">Political Strategist</h5>
+            <p>Robert Johnson is a seasoned political strategist with over 25 years of experience in campaign management and electoral strategy. He has directed successful campaigns at the local, state, and federal levels, developing particular expertise in voter turnout strategies and messaging development.</p>
+            <p>A graduate of Yale University with a degree in Political Science, Robert has contributed to the evolution of modern campaign tactics through his innovative use of data analytics and demographic targeting.</p>
+            <p>Robert previously served as the Chief Strategist for multiple senatorial and presidential campaigns. His strategic insights have helped reshape political outreach efforts across the country, particularly in traditionally underrepresented communities.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Advisor 2 Modal -->
+<div class="modal fade bio-modal" id="advisor2Modal" tabindex="-1" role="dialog" aria-labelledby="advisor2ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="advisor2ModalLabel">Emily Wilson</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="https://via.placeholder.com/400?text=Advisor+2" alt="Advisor Name" class="img-fluid rounded">
+          </div>
+          <div class="col-md-8">
+            <h5 class="mb-3">Policy Expert</h5>
+            <p>Emily Wilson is a distinguished policy expert with a focus on economic justice and healthcare reform. With 18 years of experience in policy analysis and development, she has become a leading voice in efforts to create more equitable systems of governance.</p>
+            <p>Emily earned her Ph.D. in Public Policy from Stanford University, where her research focused on the intersection of economic policy and social welfare programs.</p>
+            <p>Before joining Our Century as an advisor, Emily served as the Director of Policy Research at the Center for Economic Progress. Her publications have influenced policy development at both state and federal levels, and she regularly provides expert testimony before legislative committees.</p>
+            <p>Emily brings valuable insights into how policy choices affect different communities and how to craft legislative approaches that address systemic inequities while building broad coalitions of support.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Advisor 3 Modal -->
+<div class="modal fade bio-modal" id="advisor3Modal" tabindex="-1" role="dialog" aria-labelledby="advisor3ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="advisor3ModalLabel">Michael Chen</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="https://via.placeholder.com/400?text=Advisor+3" alt="Advisor Name" class="img-fluid rounded">
+          </div>
+          <div class="col-md-8">
+            <h5 class="mb-3">Community Organizer</h5>
+            <p>Michael Chen is a nationally recognized community organizer with a passion for grassroots mobilization and civic engagement. Over his 12-year career, he has developed innovative approaches to community outreach and coalition building.</p>
+            <p>A graduate of UC Berkeley with a Master's in Social Work, Michael has specialized in creating interconnected networks of community organizations that can effectively advocate for policy change at multiple levels of government.</p>
+            <p>Michael formerly served as the National Field Director for Civic Action Network, where he coordinated grassroots organizing efforts across 23 states. His organizing methodology has been adopted by numerous advocacy groups around the country.</p>
+            <p>His expertise in mobilizing diverse constituencies makes him a valuable advisor on strategies to build inclusive movements for political change that reflect America's demographic diversity.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Advisor 4 Modal -->
+<div class="modal fade bio-modal" id="advisor4Modal" tabindex="-1" role="dialog" aria-labelledby="advisor4ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="advisor4ModalLabel">Sarah Thompson</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="https://via.placeholder.com/400?text=Advisor+4" alt="Advisor Name" class="img-fluid rounded">
+          </div>
+          <div class="col-md-8">
+            <h5 class="mb-3">Legislative Director</h5>
+            <p>Sarah Thompson brings 20 years of experience in legislative affairs and government relations to her role as an advisor. Her career has been dedicated to translating political priorities into effective legislative action.</p>
+            <p>With a law degree from Columbia University, Sarah has specialized expertise in the legislative process and how to effectively draft and advocate for policy changes within complex political environments.</p>
+            <p>Prior to joining Our Century, Sarah served as the Legislative Director for a U.S. Senator, where she oversaw the development and advancement of the Senator's legislative agenda. She has also worked as a consultant for major advocacy organizations seeking to influence federal policy.</p>
+            <p>Her deep understanding of legislative procedures and political dynamics makes her an invaluable advisor on strategies to translate movement priorities into concrete policy outcomes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer will be included here -->
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
